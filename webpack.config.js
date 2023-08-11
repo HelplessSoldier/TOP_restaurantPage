@@ -14,7 +14,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './template.html',
+            template: 'src/template.html',
         }),
     ],
     devtool: 'source-map',
@@ -31,12 +31,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.css$/,
                 use: [ 'style-loader', 'css-loader'],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
+                type: 'asset', 
+                generator: {
+                    filename: 'images/[name][contenthash][ext]', 
+                },
             },
         ],
     },

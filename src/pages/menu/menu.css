@@ -1,0 +1,23 @@
+/* Dancing Script font (for logo)*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500&family=Roboto&family=VT323&display=swap');
+/* Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500&family=Roboto:ital,wght@0,400;1,100&family=VT323&display=swap');
+
+#menuWrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+    margin: 0px;
+    padding: 0px;
+}
+
+#menuTopBarContainer {
+    /* background-color: black; */
+}
+
+#menuLogo {
+    font-family: 'Dancing Script';
+    color: white;
+    margin-left: 20px;
+}
+
