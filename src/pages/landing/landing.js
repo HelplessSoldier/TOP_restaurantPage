@@ -15,7 +15,7 @@ function renderLandingPage(element) {
     const bgImageAttributionText = 'Image by Sueda Dilli on pexels.';
 
     // wrapper to keep styling contained to landing page
-    const landingWrapper = createElement('div', { id: 'landingWrapper' }, '');
+    const landingWrapper = createElement('div', { id: 'landingWrapper', loading: 'lazy' }, '');
 
     // buttons -> buttonContainer
     const buttonContainer = createElement('div', { id: 'buttonContainer' });
