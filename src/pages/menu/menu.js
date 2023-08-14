@@ -23,13 +23,13 @@ function renderMenuPage(element) {
     // menu items and container
     const menuItemsContainer = createElement('div', { id: 'menuItemsContainer'}, '');
 
-    const appetizersContainer = createElement('div', { id: 'appetizersContainer'}, '');
+    const appetizersContainer = createElement('div', { id: 'appetizersContainer', class: 'sectionContainer'}, '');
     const appetizersHeader = createElement('h2', { class: 'menuItemsHeader'}, appetizerText);
 
-    const mainsContainer = createElement('div', { id: 'mainsContainer'}, '');
+    const mainsContainer = createElement('div', { id: 'mainsContainer', class: 'sectionContainer'}, '');
     const mainsHeader = createElement('h2', { class: 'menuItemsHeader' }, mainsText);
 
-    const dessertContainer = createElement('div', { id: 'dessertContainer'}, '');
+    const dessertContainer = createElement('div', { id: 'dessertContainer', class: 'sectionContainer'}, '');
     const dessertHeader = createElement('h2', { class: 'menuItemsHeader'}, dessertText);
 
     // Appending headers to containers
@@ -50,7 +50,7 @@ function renderMenuPage(element) {
         menuData.forEach(item => {
             const parentContainer = document.getElementById(item.parentName);
             if (parentContainer) {
-                const menuItem = createMenuElement(item.name, item.description, images[item.imageName], item.imageName);
+                const menuItem = createMenuElement(item.name, item.description, images[item.imageName]);
                 parentContainer.appendChild(menuItem);
             }
         });

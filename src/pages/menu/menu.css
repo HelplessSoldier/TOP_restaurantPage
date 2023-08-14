@@ -11,14 +11,19 @@
 }
 
 #menuWrapper {
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
-    /* background-image: url(../../assets/images/pexels-sueda-dilli-17675996.jpg); */
+    background-image: url(../../assets/images/pexels-sueda-dilli-17675996.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -800px;
+    align-self: center;
+    justify-self: center;
     margin: 0px;
     padding: 0px;
+    gap: 55px;
 }
 
 #menuTopBarContainer {
@@ -50,3 +55,53 @@
 #menuAboutButton:hover {
     background-color: red;
 }
+
+.sectionContainer {
+    border: 5px solid rgb(88, 0, 0);
+    border-radius: 55px;
+    background-color: rgb(15, 15, 15);
+}
+
+.sectionContainer > * {
+    margin: 30px;
+}
+
+#menuItemsContainer {
+    width: 50vw;
+    overflow: auto;
+}
+
+#menuItemContainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+    gap: 20px;
+}
+
+#menuItemImage {
+    grid-column: 1;
+    max-width: 90%;
+    border-radius: 100%;
+}
+
+#menuItemTextContainer {
+    display: grid;
+}
+
+#menuTitle, 
+#menuDescription {
+    color: white;
+    padding: 20px;
+    font-family: 'Roboto' sans-serif;
+}
+
+#menuTitle {
+    border-bottom: 1px solid red;
+}
+
+.menuItemsHeader {
+    color: white;
+    font-family: 'Dancing Script';
+    font-size: 40px;
+}
+

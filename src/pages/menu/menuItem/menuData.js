@@ -45,7 +45,7 @@ const menuData = [
         id: 'm2Choux',
         name: 'M.2 Choux',
         description: 'Savor some 1TB M.2 drives encased in a delectable and light Choux pastry, elegantly topped with dark chocolate.',
-        imageName: 'M@Choux.jpeg',
+        imageName: 'M2Choux.jpeg',
         parentName: 'dessertContainer'
     },
     {
