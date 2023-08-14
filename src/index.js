@@ -5,5 +5,5 @@ import { renderMenuPage } from "./pages/menu/menu";
 const content = document.getElementById('content');
 
 clearContent(content);
-renderLandingPage(content);
-// renderMenuPage(content);
+// renderLandingPage(content);
+renderMenuPage(content);

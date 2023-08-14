@@ -3,16 +3,32 @@
 /* Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500&family=Roboto:ital,wght@0,400;1,100&family=VT323&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid orange; */
+}
+
 #menuWrapper {
     width: 100vw;
     height: 100vh;
-    background-color: grey;
+    /* background-image: url(../../assets/images/pexels-sueda-dilli-17675996.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -800px;
     margin: 0px;
     padding: 0px;
 }
 
 #menuTopBarContainer {
-    /* background-color: black; */
+    background-color: black;
+    display: grid;
+    grid-template-columns: 2fr 8fr 1fr;
+}
+
+#menuTopBarContainer > * {
+    margin: 10px;
 }
 
 #menuLogo {
@@ -21,3 +37,16 @@
     margin-left: 20px;
 }
 
+#menuAboutButton {
+    grid-column: 3;
+    background-color: rgb(75, 0, 0);
+    color: white;
+    font-family: "Roboto" sans-serif;
+    font-size: medium;
+    border: 0px;
+    border-radius: 10px;
+}
+
+#menuAboutButton:hover {
+    background-color: red;
+}
