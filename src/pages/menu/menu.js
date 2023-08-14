@@ -5,6 +5,7 @@ import { renderAboutPage } from '../about/about';
 import { createMenuElement } from './menuItem/menuItem';
 import menuData from './menuItem/menuData';
 import { importMenuImages } from '../../modulesAndFunctions/importManuImages';
+import { renderLandingPage } from '../landing/landing';
 
 function renderMenuPage(element) {
     const menuLogoText = `Phish n' Chips`;
@@ -42,26 +43,31 @@ function renderMenuPage(element) {
     menuItemsContainer.appendChild(mainsContainer);
     menuItemsContainer.appendChild(dessertContainer);
 
-    // load menu images
-    const images = importMenuImages(require.context('../../assets/images/', false, /\.(png|jpg|jpeg|gif|svg)$/));
-
-    // Populating menu items based on menuData
-    document.addEventListener('DOMContentLoaded', () => {
-        menuData.forEach(item => {
-            const parentContainer = document.getElementById(item.parentName);
-            if (parentContainer) {
-                const menuItem = createMenuElement(item.name, item.description, images[item.imageName]);
-                parentContainer.appendChild(menuItem);
-            }
-        });
-    });
-
+    
+    // finalize non menu item dom elements
     menuWrapper.append(menuTopBarContainer, menuItemsContainer);
     element.append(menuWrapper);
+
+    // load menu images
+    const images = importMenuImages(require.context('../../assets/images/', false, /\.(png|jpg|jpeg|gif|svg)$/));
+    
+    // Populating menu items based on menuData
+    menuData.forEach(item => {
+        const parentContainer = document.getElementById(item.parentName);
+        if (parentContainer) {
+            const menuItem = createMenuElement(item.name, item.description, images[item.imageName]);
+            parentContainer.appendChild(menuItem);
+        }
+    });
 
     aboutButton.addEventListener('click', () => { 
         clearContent(element);
         renderAboutPage(element);
+    })
+
+    menuLogo.addEventListener('click', () => {
+        clearContent(element);
+        renderLandingPage(element);
     })
 };
 

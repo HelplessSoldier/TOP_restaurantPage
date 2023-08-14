@@ -19,17 +19,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -800px;
-    align-self: center;
-    justify-self: center;
+    align-items: center;
     margin: 0px;
     padding: 0px;
-    gap: 55px;
 }
 
 #menuTopBarContainer {
     background-color: black;
     display: grid;
     grid-template-columns: 2fr 8fr 1fr;
+    width: 100vw;
 }
 
 #menuTopBarContainer > * {
@@ -40,6 +39,7 @@
     font-family: 'Dancing Script';
     color: white;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 #menuAboutButton {
