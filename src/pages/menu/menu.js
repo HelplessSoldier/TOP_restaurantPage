@@ -12,7 +12,7 @@ function renderMenuPage(element) {
     const menuAboutButtonText = 'Find Us';
     const appetizerText = 'API-tizers:';
     const mainsText = 'int Mains():';
-    const dessertText = 'Codefections';
+    const dessertText = 'Codefections:';
 
     const menuWrapper = createElement('div', { id: 'menuWrapper'}, '');
 
@@ -55,7 +55,7 @@ function renderMenuPage(element) {
     menuData.forEach(item => {
         const parentContainer = document.getElementById(item.parentName);
         if (parentContainer) {
-            const menuItem = createMenuElement(item.name, item.description, images[item.imageName]);
+            const menuItem = createMenuElement(item.name, item.description, images[item.imageName], item.price);
             parentContainer.appendChild(menuItem);
         }
     });

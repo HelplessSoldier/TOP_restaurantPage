@@ -89,10 +89,15 @@
 }
 
 #menuTitle, 
-#menuDescription {
+#menuDescription,
+#menuPrice {
     color: white;
-    padding: 20px;
+    padding: 10px;
     font-family: 'Roboto' sans-serif;
+}
+
+#menuPrice {
+    font-weight: bold;
 }
 
 #menuTitle {
