@@ -46,7 +46,8 @@ function renderMenuPage(element) {
         menuData.forEach(item => {
             const parentContainer = document.getElementById(item.parentName);
             if (parentContainer) {
-                const menuItem = createMenuElement(item.name, item.description, item.imagePath);
+                let imagePath = `../../../assets/images/${item.imageName}`;
+                const menuItem = createMenuElement(item.name, item.description, imagePath);
                 parentContainer.appendChild(menuItem);
             }
         });
