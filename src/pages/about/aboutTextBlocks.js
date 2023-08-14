@@ -1,3 +1,4 @@
+export const aboutLogoText = `Phish n' Chips`;
 export const aboutHeader = 'Discover Our Galactic Restaurant Locations'
 export const aboutBody = 'Embark on a culinary journey through the heart of the cosmos! Our enchanting restaurant chain spans the expanse of the Perseus Arm within the Milky Way, promising an extraordinary dining experience at every stop.';
 export const aPHeader = 'Alpha Persei Branch:';
