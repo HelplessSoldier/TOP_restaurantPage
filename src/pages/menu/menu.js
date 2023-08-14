@@ -4,6 +4,7 @@ import { clearContent } from '../../modulesAndFunctions/clearpage';
 import { renderAboutPage } from '../about/about';
 import { createMenuElement } from './menuItem/menuItem';
 import menuData from './menuItem/menuData';
+import { importMenuImages } from '../../modulesAndFunctions/importManuImages';
 
 function renderMenuPage(element) {
     const menuLogoText = `Phish n' Chips`;
@@ -41,17 +42,19 @@ function renderMenuPage(element) {
     menuItemsContainer.appendChild(mainsContainer);
     menuItemsContainer.appendChild(dessertContainer);
 
+    // load menu images
+    const images = importMenuImages(require.context('../../assets/images/', false, /\.(png|jpg|jpeg|gif|svg)$/));
+
     // Populating menu items based on menuData
     document.addEventListener('DOMContentLoaded', () => {
         menuData.forEach(item => {
             const parentContainer = document.getElementById(item.parentName);
             if (parentContainer) {
-                let imagePath = `../../../assets/images/${item.imageName}`;
-                const menuItem = createMenuElement(item.name, item.description, imagePath);
+                const menuItem = createMenuElement(item.name, item.description, images[item.imageName], item.imageName);
                 parentContainer.appendChild(menuItem);
             }
         });
-    })
+    });
 
     menuWrapper.append(menuTopBarContainer, menuItemsContainer);
     element.append(menuWrapper);
