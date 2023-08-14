@@ -100,13 +100,17 @@
     font-weight: bold;
 }
 
+#menuDescription {
+    letter-spacing: 2px;
+}
+
 #menuTitle {
     border-bottom: 1px solid red;
 }
 
 .menuItemsHeader {
     color: white;
-    font-family: 'Dancing Script';
-    font-size: 40px;
+    font-family: "Roboto" sans-serif;
+    font-size: 30px;
 }
 

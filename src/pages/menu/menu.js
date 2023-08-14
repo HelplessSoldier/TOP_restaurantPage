@@ -43,7 +43,6 @@ function renderMenuPage(element) {
     menuItemsContainer.appendChild(mainsContainer);
     menuItemsContainer.appendChild(dessertContainer);
 
-    
     // finalize non menu item dom elements
     menuWrapper.append(menuTopBarContainer, menuItemsContainer);
     element.append(menuWrapper);
