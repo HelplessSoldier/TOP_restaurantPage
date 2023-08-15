@@ -5,5 +5,5 @@ import { renderAboutPage } from "./pages/about/about";
 const content = document.getElementById('content');
 
 clearContent(content);
-// renderLandingPage(content);
-renderAboutPage(content);
+renderLandingPage(content);
+// renderAboutPage(content);

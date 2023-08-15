@@ -56,6 +56,11 @@
     background-color: red;
 }
 
+#locationsContainer {
+    width: 100%;
+    border: 1px solid orange;
+}
+
 .sectionContainer {
     border: 5px solid rgb(88, 0, 0);
     border-radius: 55px;

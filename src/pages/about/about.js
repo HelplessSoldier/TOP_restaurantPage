@@ -2,16 +2,13 @@ import './about.css'
 import { createElement } from '../../modulesAndFunctions/createElement';
 
 import { 
-    aboutLogoText,
     aboutHeader, 
-    aboutBody, 
     aPHeader, 
     aPBody, 
     ePHeader,
     ePBody,
     algolHeader,
     algolBody,
-    locationsEnd,
     mapTag,
     cIHeader,
     aMail,
@@ -20,15 +17,9 @@ import {
 
 function renderAboutPage(element) {
     const aboutWrapper = createElement('div', { id: 'aboutWrapper' }, '');
- 
-    const headerElement = createElement('h1', { id: 'aboutHeader' }, aboutHeader);
-    const aboutBodyElement = createElement('p', { id: 'aboutBody' }, aboutBody);
-
     const mapContainer = createElement('div', { id: 'mapContainer' }, '');
-
     const mapImage = require('../../assets/images/map.jpg');
     const mapImageElement = createElement('img', { id: 'map', src: mapImage }, '');
-
     const locationTextContainer = createElement('div', { id: 'locationTextContainer' }, '');
 
     const aPContainer = createElement('div', { id: 'aPContainer', class: "locationContainer" }, '');
@@ -57,22 +48,27 @@ function renderAboutPage(element) {
         locationTextContainer
     );
  
-    const locationsEndElement = createElement('p', { id: 'locationsEnd' }, locationsEnd);
     const mapTagElement = createElement('h1', { id: 'mapTag' }, mapTag);
+    const contactContainer = createElement('div', { id: 'contactContainer' }, '');
     const cIHeaderElement = createElement('h3', { id: 'cIHeader' }, cIHeader);
-     
     const aMailElement = createElement('p', { id: 'aMail' }, aMail);
     const qECodeElement = createElement('p', { id: 'qECode' }, qECode);
+    const locationsContainer = createElement('div', { id: 'locationsContainer' }, '');
 
-    aboutWrapper.append(
-        headerElement, 
-        aboutBodyElement,
-        mapTagElement,
-        mapContainer,
-        locationsEndElement,
+    contactContainer.append(
         cIHeaderElement,
         aMailElement,
         qECodeElement
+    )
+
+    locationsContainer.append(
+        mapTagElement,
+        mapContainer
+    )
+
+    aboutWrapper.append(
+        locationsContainer,
+        contactContainer
     );
 
     element.append(aboutWrapper);

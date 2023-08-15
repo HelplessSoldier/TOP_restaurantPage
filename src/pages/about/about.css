@@ -1,30 +1,69 @@
+/* Dancing Script font (for logo)*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500&family=Roboto&family=VT323&display=swap');
+/* Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500&family=Roboto:ital,wght@0,400;1,100&family=VT323&display=swap');
+
+
 #aboutWrapper {
-    /* background-image: url(../../assets/images/pexels-sueda-dilli-17675996.jpg);
+    background-image: url(../../assets/images/pexels-sueda-dilli-17675996.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -800px; */
+    background-position: center -800px;
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
+    display: grid;
+    grid-template-rows: 10fr 1fr;
+    gap: 20px;
 }
 
 #aboutWrapper > * {
+    flex: 1;
     width: 55%;
     margin: 0 auto;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    border: 5px solid rgb(88, 0, 0);
+    border-bottom: 0px solid transparent;
+    border-top: 0px solid transparent;
+    border-radius: 0px;
+    background-color: rgb(15, 15, 15);
+}
+
+#aboutHeader,
+#aboutBody,
+#mapTag {
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+#locationsContainer {
+    width: 55%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 100fr;
+    border-top: 5px solid rgb(88, 0, 0);
 }
 
 #mapContainer {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    width: 55%;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / span 2;
+    grid-row: 2;
 }
 
 #map {
-    width: 100%;
+    width: 90%;
+    margin: 20px;
+    align-self: center;
+    justify-self: center;
+    border: 5px solid rgb(88, 0, 0);
+    border-radius: 55px;
 }
 
 #locationTextContainer {
     display: grid;
+    margin-bottom: 20px;
 }
 
 .locationContainer {
@@ -34,20 +73,52 @@
 }
 
 .locationHeader {
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px solid red;
 }
 
 .locationBody {
+    padding: 10px;
+    margin-right: 40px;
+    margin-top: 0px;
+    letter-spacing: 1.5px;
+}
+
+#aboutHeader,
+#aboutBody,
+#mapTag,
+#locationsEnd,
+#cIHeader,
+#aMail,
+#qECode {
     padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#mapTag {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#headerElement,
+#locationsContainer,
+#contactContainer {
+    border: 5px solid rgb(88, 0, 0);
+    border-radius: 55px;
+}
+
+#contactContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 5px solid rgb(88, 0, 0);
+    align-items: center;
 }
 
 
 
 
-
-
-
-
-* {
+/* * {
     border: 1px solid orange;
-}
+} */
