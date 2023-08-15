@@ -3,9 +3,9 @@ import { createElement } from '../../modulesAndFunctions/createElement';
 import { clearContent } from '../../modulesAndFunctions/clearpage';
 import { renderAboutPage } from '../about/about';
 import { createMenuElement } from './menuItem/menuItem';
-import menuData from './menuItem/menuData';
 import { importMenuImages } from '../../modulesAndFunctions/importManuImages';
 import { renderLandingPage } from '../landing/landing';
+import menuData from './menuItem/menuData';
 
 function renderMenuPage(element) {
     const menuLogoText = `Phish n' Chips`;

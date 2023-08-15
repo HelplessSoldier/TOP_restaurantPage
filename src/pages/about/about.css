@@ -5,4 +5,49 @@
     background-position: center -800px; */
     width: 100vw;
     height: 100vh;
+    margin: 0 auto;
+}
+
+#aboutWrapper > * {
+    width: 55%;
+    margin: 0 auto;
+}
+
+#mapContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 55%;
+}
+
+#map {
+    width: 100%;
+}
+
+#locationTextContainer {
+    display: grid;
+}
+
+.locationContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.locationHeader {
+    padding: 20px;
+}
+
+.locationBody {
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+* {
+    border: 1px solid orange;
 }
